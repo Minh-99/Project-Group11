@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Lienhe";
+    Layout = "~/Views/Shared/_Layout_HV.cshtml";
+}
+
+<div class="container ">
+    <div class="row">
+        <div class="thumbnail" style="background-color:darkgray">
+            <section class="help">
+                <h2 style="color: red;"> Liên Hệ Tư Vấn</h2>
+                <p class="lead-text">
+                    Hãy để lại thông tin, thắc mắc của bạn, G11 sẽ liên hệ với bạn sớm nhất có thể nhé!
+                </p>
+                <form action="">
+                    <div class="help-form">
+                        <p class="clearfix">
+                            <input type="text" name="Họ" placeholder="Họ" value="" class="half-size" style="width:350px">
+                            <input type="text" name="Tên" placeholder="Tên" value="" class="half-size" style="width:350px">
+                        </p>
+                        <p class="clearfix">
+                            <input type="email" name="email" placeholder="Email" value="" class="half-size" style="width:350px">
+                            <input type="tel" name="Số Điện Thoại" placeholder="Số điện thoại" value="" class="half-size" style="width:350px">
+                        </p>
+                        <p class="clearfix">
+                            <select class="select" name="country" class="half-size" style="width:350px">
+                                <option> Lựa chọn trung tâm</option>
+                                <option value="Quận Bình Thạnh"> 21 Xô Viết Nghệ Tỉnh, Quận Bình Thạnh</option>
+                                <option value="canada"> 233 Nguyễn Đình Chiểu, Quận 3</option>
+                                <option value="japan"> 6230 Hoàng Hoa Thám, Quận 11</option>
+                            </select>
+                            <select class="select" name="course" class="half-size">
+                                <option> Lựa chọn khóa học</option>
+                                <option value="Ielts"> Ielts</option>
+                                <option value="Toeic"> Toeic</option>
+                                <option value="Giao tiếp"> Giao tiếp</option>
+                            </select>
+                        <p> <textarea name="message" placeholder="Thắc mắc" cols="50" rows="10" class="full-size"> </textarea> </p>
+                        <p> <button type="submit" class="btn btn-danger" style="width:90px"> Gửi</button> </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+<br />
+

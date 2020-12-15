@@ -1,0 +1,675 @@
+﻿@using System.Globalization
+@using Group11.Models
+@model IEnumerable<Group11.Models.Homepage>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <header>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
+        <link href="~/CSS/homepage(CDN).css" rel="stylesheet" />
+        <script src="~/CSS/custom - Copy.js"></script>
+    </header>
+<br />
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0"
+            class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    @foreach (var item in Model)
+    {
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="@item.Picture1" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="@item.Picture2" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="@item.Picture3" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="@item.Picture4" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="@item.Picture5" alt="...">
+                <div class="carousel-caption">
+
+                </div>
+            </div>
+        </div>
+    }
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button"
+       data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button"
+       data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+    <div class="container-fluid padding">
+
+
+        <div class="row welcome text-center">
+            <h2 class=""><marquee direction="right"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="yellow">
+    <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+</svg>VÌ SAO CHỌN G11<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"color="yellow" />
+    <path fill-rule="evenodd"  d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+</svg></marquee></h2>
+            <hr>
+            <div class="col-sm-1 col-md-1 col-lg-1 text-center">
+
+            </div>
+
+            <div class="col-sm-10 col-md-10 col-lg-10">
+
+                <div class="thumbnail" style="background-image: url('https://i.pinimg.com/736x/1f/a5/eb/1fa5eb16020bb5894ab19750a3192093.jpg'); color: white ">
+                    <div class="row">
+
+                        <div class="S1 col-sm-3">
+                            @foreach (var item in Model)
+                            {
+                                <h1 class="Foreign">@item.ForeignFollower</h1>
+                            }
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                            <p class="Foreigntext">
+                                Foreign Follower
+                            </p>
+                        </div>
+                        <div class="S2 col-sm-3">
+                            @foreach (var item in Model)
+                            {
+                                <h1 class="Students">@item.StudentsEnrolled</h1>}
+                            <i class="fas fa-user-graduate"></i>
+                            <p class="Studentstext">
+                                Students Enrolled
+                            </p>
+                        </div>
+                        <div class="S3 col-sm-3">
+                            @foreach (var item in Model)
+                            {
+                                <h1 class="Classes">@item.ClassesComplete</h1>}
+                            <i class="fas fa-school"></i>
+                            <p class="Classestext">
+                                Classes Complete
+                            </p>
+                        </div>
+                        <div class="S4 col-sm-3">
+                            @foreach (var item in Model)
+                            {
+                                <h1 class="Certified">@item.CertifiedTeachers</h1>}
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            <p class="Certifiedtext">
+                                Certified Teachers
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <a id="vett"></a>
+    <div class="container">
+        <div class="row text-center">
+            <div>
+
+                <h2 class="">
+                    <marquee direction="right">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="yellow">
+                            <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+                        </svg>VỀ TRUNG TÂM<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" color="yellow" />
+                            <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                        </svg>
+                    </marquee>
+                </h2>
+                <hr>
+            </div>
+
+            <div class="col-sm-6" style="text-align:center; color:white">
+                <h4>ĐIỂM IELTS TRUNG BÌNH CỦA CÁC HỌC VIÊN TẠI TRUNG TÂM GENERAL 11</h4>
+                <p>Quý 1 năm 2020 vừa qua,những học viên cuối cùng của trung tâm GENERAL 11 cũng đã nhận được kết quả điểm thi IELTS tháng 4.Kết quả đạt được không phụ lòng mong đợi và sự cố gắng của ...</p>
+                <a href="#">Xem thêm</a>
+            </div>
+
+            <div class="col-sm-6">
+                <iframe src="https://www.youtube.com/embed/ELf4BaSzbj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+    <a id="vegv"></a>
+    <div class="container">
+        <div class="row text-center">
+
+
+            <h2 class="">
+                <marquee direction="right">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="yellow">
+                        <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+                    </svg>ĐỘI NGŨ GIẢNG VIÊN<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" color="yellow" />
+                        <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                    </svg>
+                </marquee>
+            </h2>
+            <hr>
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail">
+                            <img class="img-thumbnail img-responsive" src="@item.PictureGV" alt="" />
+                            <div class="caption">
+                                <h4>
+                                    @item.TenGV
+                                </h4>
+                                <p>
+                                    @item.MotaGV
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail">
+                            <img class="img-thumbnail img-responsive" src="@item.PictureGV1" alt="" />
+                            <div class="caption">
+                                <h4>
+                                    @item.TenGV1
+                                </h4>
+                                <p>
+                                    @item.MotaGV1
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail">
+                            <img class="img-thumbnail img-responsive" src="@item.PictureGV2" alt="" />
+                            <div class="caption">
+                                <h4>
+                                    @item.TenGV2
+                                </h4>
+                                <p>
+                                    @item.MotaGV2
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+    <a id="vehv"></a>
+    <div class="container">
+        <h2 class="">
+            <marquee direction="right">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="yellow">
+                    <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+                </svg>THÀNH TÍCH HỌC VIÊN<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" color="yellow" />
+                    <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                </svg>
+            </marquee>
+        </h2>
+        <hr>
+        <div class="row text-center" style="background-color:antiquewhite">
+
+
+
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail well">
+                            <img class="img-responsive img-circle" src="@item.PictureHV" alt="" width="304" height="236" />
+
+                            <div class="caption">
+                                <h4>
+                                    @item.DiemHV
+                                </h4>
+                                <p>
+                                    @item.TenHV
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail well">
+                            <img class="img-responsive img-circle" src="@item.PictureHV1" alt="" width="304" height="236" />
+
+                            <div class="caption">
+                                <h4>
+                                    @item.DiemHV1
+                                </h4>
+                                <p>
+                                    @item.TenHV1
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-md-4 ">
+                    <div class="row">
+                        <div class="thumbnail well">
+                            <img class="img-responsive img-circle" src="@item.PictureHV2" alt="" width="304" height="236" />
+
+                            <div class="caption">
+                                <h4>
+                                    @item.DiemHV2
+                                </h4>
+                                <p>
+                                    @item.TenHV2
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail">
+                            <img class="img-responsive img-circle" src="@item.PictureHV3" alt="" width="304" height="236" />
+
+                            <div class="caption">
+                                <h4>
+                                    @item.DiemHV3
+                                </h4>
+                                <p>
+                                    @item.TenHV3
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail">
+                            <img class="img-responsive img-circle" src="@item.PictureHV4" alt="" width="304" height="236" />
+
+                            <div class="caption">
+                                <h4>
+                                    @item.DiemHV4
+                                </h4>
+                                <p>
+                                    @item.TenHV4
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4 col-md-4">
+                    <div class="row">
+                        <div class="thumbnail">
+                            <img class="img-responsive img-circle" src="@item.PictureHV5" alt="" width="304" height="236" />
+
+                            <div class="caption">
+                                <h4>
+                                    @item.DiemHV5
+                                </h4>
+                                <p>
+                                    @item.TenHV5
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+
+    <div class="container" >
+        <div class="row text-left">
+
+            <h2 class="">
+                <marquee direction="right">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="yellow">
+                        <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+                    </svg>HỌC VIÊN NÓI GÌ?<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" color="yellow" />
+                        <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                    </svg>
+                </marquee>
+            </h2>
+            <hr />
+
+            <div class="col-md-12 well"style="background-color:antiquewhite">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <p>
+                    <img class=" img-circle" src="https://images.unsplash.com/photo-1556221157-c8f66699e7fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" width="40" height="33" />
+                    Vũ Huy Hoàng
+                </p>
+                <span class="pull-right">1 day ago</span>
+                <p>From <em>United States</em></p>
+                <p>
+                    "Tại G11, giáo viên được tuyển chọn kỹ lưỡng, đảm bảo chất lượng giảng dạy, nhiều cấp độ dành cho mọi độ tuổi, giúp mình tiếng Anh xuyên suốt. Mình rất hài lòng khi thấy sau 1 thời gian đã tiến bộ vượt bậc, đạt kết quả cao trong các kỳ thi Anh ngữ.."
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="col-md-12 well"style="background-color:antiquewhite">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <p>
+                    <img class=" img-circle" src="https://images.unsplash.com/photo-1521702813222-1943f3fb9c07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" width="40" height="33" />
+                    Mai Thành Đạt
+                </p>
+                <span class="pull-right">1 day ago</span>
+                <p>From <em>Việt Nam</em></p>
+                <p>
+                    "Gia đình mình có dự định sang Mỹ nên đầu tư tiếng Anh cho mình từ rất sớm. Mình đã chọn G11 vì được bạn bè, đồng nghiệp giới thiệu. Sau 1 thời gian cảm thấy rất hiệu quả, thường đứng hạng nhất môn tiếng Anh ở trường.."
+                </p>
+            </div>
+
+            <hr />
+
+            <div class="col-md-12 well"style="background-color:antiquewhite">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <p>
+                    <img class=" img-circle" src="https://images.unsplash.com/photo-1564057600948-aff98f958d55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" width="40" height="33" />
+                    Dương Mai
+                </p>
+                <span class="pull-right">1 day ago</span>
+                <p>From <em>Việt Nam</em></p>
+                <p>
+                    "Thầy cô tại G11 rất biết cách truyền cảm hứng để mọi người luôn thấy mình được nghe nói tiếng Anh liên tục. Học viên được khuyến khích nói và đừng sợ sai, thầy cô luôn sẵn sàng chỉnh sửa để mình nói chuẩn và rõ ràng hơn.."
+                </p>
+            </div>
+
+            <hr />
+
+            <div class="col-md-12 well"style="background-color:antiquewhite">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <p>
+                    <img class=" img-circle" src="https://images.unsplash.com/photo-1561409625-df3c51c39c2f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" width="40" height="33" />
+                    Hà Việt Hoàng
+                </p>
+                <span class="pull-right">1 day ago</span>
+                <p>From <em>Việt Nam</em></p>
+                <p>
+                    "Giáo viên thường chỉ ra được những lỗi sai trong phát âm người Việt hay mắc phải. Chủ đề học đa dạng và được luyện tập nhiều giúp em tăng độ phản xạ khi bước ra giao tiếp ngoài thực tế. Với chi phí hợp lý, em rất hài lòng về lựa chọn học tại đây.."
+                </p>
+            </div>
+
+            <hr />
+
+            <div class="col-md-12 well"style="background-color:antiquewhite">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <p>
+                    <img class=" img-circle" src="https://images.unsplash.com/photo-1512813498716-3e640fed3f39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" width="40" height="33" />
+                    Trần Thủy Tiên
+                </p>
+                <span class="pull-right">1 day ago</span>
+                <p>From <em>Việt Nam</em></p>
+                <p>
+                    "Từ khi học G11, mình thấy tự tin hơn trong giao tiếp vì có nhiều cơ hội trò chuyện với thầy cô người nước ngoài. Vì là thầy cô bản ngữ nên luôn được chỉnh sửa khi có lỗi phát âm, điều này giúp mình rèn luyện được cách phát âm của mình và nói tốt hơn rất nhiều."
+                </p>
+            </div>
+
+            <hr />
+        </div>
+
+      
+
+
+    </div>
+
+
+    <div class="container text-center">
+        <div class="row welcome ">
+            <h2 class="">
+                <marquee direction="right">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="yellow">
+                        <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+                    </svg>LỊCH KHAI GIẢNG<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" color="yellow" />
+                        <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                    </svg>
+                </marquee>
+            </h2>
+            <hr class="my-4" />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Khóa học</th>
+                        <th>Mã khóa hoc</th>
+                        <th>Dự kiến khai giảng</th>
+                        <th>Thời gian</th>
+                        <th>Lịch học</th>
+                        <th>Số buổi</th>
+
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Khoahoc</td>
+                            <td>@item.Makhoahoc</td>
+                            <td>@item.Khaigiang</td>
+                            <td>@item.Thoigian</td>
+                            <td>@item.lichhoc</td>
+                            <td>@item.sobuoi</td>
+                        </tr>
+
+                    </tbody>
+                }
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Khoahoc1</td>
+                            <td>@item.Makhoahoc1</td>
+                            <td>@item.Khaigiang1</td>
+                            <td>@item.Thoigian1</td>
+                            <td>@item.lichhoc1</td>
+                            <td>@item.sobuoi1</td>
+                        </tr>
+
+                    </tbody>
+                }
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Khoahoc2</td>
+                            <td>@item.Makhoahoc2</td>
+                            <td>@item.Khaigiang2</td>
+                            <td>@item.Thoigian2</td>
+                            <td>@item.lichhoc2</td>
+                            <td>@item.sobuoi2</td>
+                        </tr>
+
+                    </tbody>
+                }
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Khoahoc3</td>
+                            <td>@item.Makhoahoc3</td>
+                            <td>@item.Khaigiang3</td>
+                            <td>@item.Thoigian3</td>
+                            <td>@item.lichhoc3</td>
+                            <td>@item.sobuoi3</td>
+                        </tr>
+
+                    </tbody>
+                }
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.Khoahoc4</td>
+                            <td>@item.Makhoahoc4</td>
+                            <td>@item.Khaigiang4</td>
+                            <td>@item.Thoigian4</td>
+                            <td>@item.lichhoc4</td>
+                            <td>@item.sobuoi4</td>
+                        </tr>
+
+                    </tbody>
+                }
+            </table>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="">
+                <marquee direction="right">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" color="yellow">
+                        <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
+                    </svg>ĐĂNG KÝ NHẬN TƯ VẤN<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" color="yellow" />
+                        <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+                    </svg>
+                </marquee>
+            </h2>
+            <hr>
+            <div class="container-fluid mt-3 center">
+                <div class="row">
+                    <div class="col-sm-5 col-md-5 col-lg-5 text-center">
+
+                    </div>
+
+                    <div class="col-sm-7 col-md-7 col-lg-7">
+                        <form>
+
+                            <div class="form-group">
+                                <label style="color:white" for="inputAddress">Họ & Tên</label>
+                                <input type="text" class="form-control"
+                                       placeholder="Nguyễn Văn A">
+                            </div>
+                            <div class="form-group">
+                                <label style="color:white" for="myEmail">Email</label>
+                                <input type="email" class="form-control"
+                                        id="myEmail" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label style="color:white"for="inputAddress2">Số Điện Thoại</label>
+                                <input type="text" class="form-control"
+                                       placeholder="0123456789">
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color:white"for="myState">Tỉnh/Thành Phố</label>
+                                <select id="myState" class="form-control">
+                                    <option selected>Hồ Chí Minh</option>
+                                    <option>Đà Nẵng</option>
+                                    <option>Hà Nội</option>
+                                    <option>Bình Dương</option>
+                                    <option>Cần Thơ</option>
+                                </select>
+                            </div>
+                            <script>
+                                
+                                function send() {
+                                    alert("Cảm ơn bạn đã gửi thông tin đến G11! Chúng tôi sẽ sớm phản hồi đến bạn ");
+                                }
+                            </script>
+
+
+                            <div class="center">
+                                <button type="submit" class="btn btn-primary" onclick="send();">Gửi</button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+
+
+
+
+
+        </div>
+    </div>
+
+

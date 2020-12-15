@@ -1,0 +1,83 @@
+﻿@model Group11.Models.KhoahocIelts
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KhoahocIelts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaoVien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaoVien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Noidung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Noidung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giaotrinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giaotrinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hoatdong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hoatdong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hocphi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hocphi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

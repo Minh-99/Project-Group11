@@ -1,0 +1,54 @@
+﻿
+@media only screen and (max-width: 480px) {
+    .container {
+        margin-bottom: 20px;
+    }
+
+    .btn-list {
+        padding-left: 0px;
+    }
+
+    a {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 1023px) and (max-device-width: 1111px) {
+    .container {
+        margin-top: 140px;
+        margin-bottom: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        margin-top: 100px;
+        margin-bottom: 125px;
+    }
+}
+
+
+.btn-list {
+    text-align: center;
+}
+
+    .btn-list li {
+        display: inline;
+        margin: 0 12px;
+    }
+
+        .btn-list li a {
+            background-color: #2d3032;
+            border-radius: 4px;
+            color: #fff;
+            display: inline-block;
+            height: 56px;
+            line-height: 56px;
+            min-width: 170px;
+            text-decoration: none;
+            transition: 0.3s background-color;
+        }
+
+            .btn-list li a:hover {
+                background-color: #00aeef;
+            }

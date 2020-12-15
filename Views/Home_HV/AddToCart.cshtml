@@ -1,0 +1,61 @@
+﻿@model Group11.Models.HoaDon
+@using System.Globalization
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_Layout_HV.cshtml";
+}
+
+<h2>Your cart</h2>
+<table id="cartTable" class="table">
+    <thead>
+        <tr>
+            <th>Số lượng</th>
+            <th>Sản phẩm</th>
+            <th class="text-right">Giá</th>
+            <th class="text-right">Thành Tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hoaDonChiTiet in Model.ChiTietHoaDons)
+        {
+            <tr>
+                <td class="text-center">@hoaDonChiTiet.SoLuong</td>
+                <td class="text-left">@hoaDonChiTiet.MovieObj.Title</td>
+                <td class="text-right">
+                    @hoaDonChiTiet.MovieObj.Price.ToString("C0", new CultureInfo("vi-VN"))
+                </td>
+                <td class="text-right">
+                    @((hoaDonChiTiet.SoLuong * hoaDonChiTiet.MovieObj.Price).ToString("C0", new CultureInfo("vi-VN")))
+                </td>
+                <td>
+                    @Html.ActionLink("Remove", "RemoveFromCart", new { MaTailieus = hoaDonChiTiet.MaMovie }, new { @class = "btn btn-sm btn-warning" })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+                @{
+
+                    foreach (var hoaDonChiTiet in Model.ChiTietHoaDons)
+                    {
+
+                        decimal total_all = 0;
+                        var total = hoaDonChiTiet.SoLuong * hoaDonChiTiet.MovieObj.Price;
+                        total_all += total;
+                        Model.TongTien += Convert.ToDouble(total_all);
+                    }
+                }
+                @Model.TongTien.ToString("C0", new CultureInfo("vi-VN"));
+                @*@Model.TongTien.ToString("C0", new CultureInfo("vi-VN"));*@
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-center">
+    @Html.ActionLink("Continue shopping", "Tailieu", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Checkout now", "Checkout", null, new { @class = "btn btn-primary" })
+</div>
+

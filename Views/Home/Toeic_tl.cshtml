@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Toeic_tl";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/CSS/tailieu.css" rel="stylesheet" />
+<div class="container" style="margin-top: 112px; margin-bottom: 155px;">
+    <form class="b22 text-center" style=" border:double;">
+        <section class="best-shared">
+            <form class="b2">
+
+
+                <h2><strong>Tài liệu cần đăng nhập hoặc đăng kí để xem</strong></h2>
+
+                <ul class="btn-list">
+                    <li>@Html.ActionLink("Đăng Nhập", "login", "Account")</li>
+                    <li>@Html.ActionLink("Đăng Ký", "Register", "Account")</li>
+                </ul>
+
+            </form>
+        </section>
+    </form>
+</div>
+

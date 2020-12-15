@@ -1,0 +1,426 @@
+﻿@model IEnumerable<Group11.Models.Homepage>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="container">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ForeignFollower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentsEnrolled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassesComplete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CertifiedTeachers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureGV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenGV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MotaGV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureGV1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenGV1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MotaGV1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureGV2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenGV2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MotaGV2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureHV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiemHV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureHV1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHV1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiemHV1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureHV2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHV2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiemHV2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureHV3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHV3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiemHV3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureHV4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHV4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiemHV4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PictureHV5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHV5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiemHV5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoahoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Makhoahoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khaigiang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thoigian)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lichhoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sobuoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoahoc1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Makhoahoc1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khaigiang1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thoigian1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lichhoc1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sobuoi1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoahoc2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Makhoahoc2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khaigiang2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thoigian2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lichhoc2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sobuoi2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoahoc3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Makhoahoc3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khaigiang3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thoigian3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lichhoc3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sobuoi3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoahoc4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Makhoahoc4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khaigiang4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thoigian4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lichhoc4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sobuoi4)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Picture1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Picture2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Picture3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Picture4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Picture5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ForeignFollower)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentsEnrolled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClassesComplete)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CertifiedTeachers)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureGV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenGV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MotaGV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureGV1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenGV1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MotaGV1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureGV2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenGV2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MotaGV2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureHV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiemHV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureHV1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHV1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiemHV1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureHV2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHV2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiemHV2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureHV3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHV3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiemHV3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureHV4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHV4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiemHV4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureHV5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHV5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiemHV5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khoahoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Makhoahoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khaigiang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thoigian)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lichhoc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sobuoi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khoahoc1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Makhoahoc1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khaigiang1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thoigian1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lichhoc1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sobuoi1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khoahoc2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Makhoahoc2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khaigiang2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thoigian2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lichhoc2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sobuoi2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khoahoc3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Makhoahoc3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khaigiang3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thoigian3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lichhoc3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sobuoi3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khoahoc4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Makhoahoc4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Khaigiang4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thoigian4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lichhoc4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sobuoi4)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IDlich }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IDlich }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IDlich })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "Order Submitted";
+}
+<div class="text-center">
+    <h2>Thanks!</h2>
+    Thanks for placing your order. We'll ship your goods as
+    soon as possible.
+</div>
+
+
+<div class="text-center">
+    @Html.ActionLink("Continue shopping", "Index", null, new { @class = "btn btn-primary" })
+</div>

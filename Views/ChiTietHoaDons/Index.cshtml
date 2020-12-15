@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Group11.Models.ChiTietHoaDon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_HV.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HoaDonObj.MaHoaDon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieObj.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoaDonObj.MaHoaDon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieObj.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaChiTietHoaDon }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaChiTietHoaDon }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaChiTietHoaDon })
+        </td>
+    </tr>
+}
+
+</table>

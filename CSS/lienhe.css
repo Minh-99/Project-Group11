@@ -1,0 +1,41 @@
+﻿/*tao hieu uwng cho button*/
+.nut {
+    border-radius: 4px;
+    background-color: #d9534f;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 2px;
+    width: 100px;
+    height: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: center;
+}
+
+    .nut span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .nut span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .nut:hover span {
+        padding-right: 25px;
+    }
+
+        .nut:hover span:after {
+            opacity: 1;
+            right: 0;
+        }

@@ -1,0 +1,47 @@
+﻿
+@using System.Globalization
+@using Group11.Models
+@model IEnumerable<Group11.Models.Tintuc>
+@{
+    ViewBag.Title = "Tintuc";
+    Layout = "~/Views/Shared/_Layout_HV.cshtml";
+}
+
+<div class="container">
+
+    <h2 text-align:"center">Tin Tức &amp; Sự Kiện</h2>
+
+    <div class="img-responsive col-sm-12 col-md-12">
+        <img class="img-thumbnail center" src="https://sohanews.sohacdn.com/thumb_w/660/2019/4/16/photo-7-15554046424151085127637-crop-15554051612471476202748.jpg" style="width:1200px; " />
+    </div>
+
+    <p class="lead-text">
+        Tính đến hiện tại, ba tháng đã trôi qua với những diễn biến phức tạp của dịch bệnh Covid-19 và tình hình đang tạm trong vòng kiểm soát của đội ngũ y tế và Nhà nước. Vấn đề đặt ra lúc này là những bước tiếp theo trong chiến lược phòng bệnh tại mỗi gia đình, cách để quay lại nhịp sinh hoạt cũ và bí quyết để tạo lập, lan toả năng lượng tích cực.
+
+        Đó cũng là mục tiêu của chuỗi hội thảo “Đồng hành toàn diện, vững bước cùng con” do VUS tổ chức. Mỗi buổi hội thảo sẽ trò chuyện cùng chuyên gia về một chủ đề và được phát trực tiếp dưới hình thức livestream trên mạng xã hội của VUS. Người tham gia được lắng nghe chia sẻ từ diễn giả và tương tác qua hình thức đặt câu hỏi trong phần bình luận.
+    </p>
+</div>
+<div class="container">
+    <div class="row">
+        <h3>&quot;Tin Mới Cập Nhật&quot;</h3>
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4 col-md-3">
+
+                <div class="img">
+                    <img class="img-thumbnail" @Html.ShowImage(item.Picture)
+                </div>
+                <div class="caption">
+                    <h3>@item.Tieude</h3>
+                    <p>@item.Noidung</p>
+                    <p><a href="@item.Xemthem">Xem chi tiêt</a></p>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+
+

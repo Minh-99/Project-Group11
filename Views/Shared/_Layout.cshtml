@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        body {
+            padding-bottom: 0px;
+        }
+
+        li {
+            color: white
+        }
+
+        .head_nav.fix {
+            left: 0;
+            max-width: 100%;
+            overflow: visible;
+            position: fixed !important;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+
+</head>
+<body>
+    <script src="~/CSS/nav.js"></script>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default head_nav fix" style="background:black;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top:14px">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="" href="@Url.Action("Index","Home")">
+                        <img src="../IMG/logoG11A.png"
+                             alt="Logo" style="height:50px; width:50px">
+                    </a>
+                    <form class="navbar-form visible-xs-inline-block" style="width:60%; margin-top:2px; margin-left:0px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="@Url.Action("Index","Home")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#777">GIỚI THIỆU<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#vett">VỀ TRUNG TÂM</a></li>
+                                <li><a href="#vegv">ĐỘI NGŨ GIẢNG VIÊN</a></li>
+                                <li><a href="#vehv">HỌC VIÊN TẠI TRUNG TÂM</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#777">KHOÁ HỌC<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+
+                                <li>@Html.ActionLink("Ielts", "Ielts_kh", "Home")</li>
+                                <li>@Html.ActionLink("Toeic", "Toeic_kh", "Home")</li>
+                                <li>@Html.ActionLink("Giao Tiếp", "GiaoTiep_kh", "Home")</li>
+                            </ul>
+                        </li>
+
+                        <li>@Html.ActionLink("TÀI LIỆU", "Ielts_tl", "Home")</li>
+
+
+                        <li>@Html.ActionLink("TIN TỨC", "Tintuc", "Home")</li>
+                        <li>@Html.ActionLink("LIÊN HỆ", "Lienhe", "Home")</li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="navbar-form navbar-left hidden-xs">
+                                <div class="form-group">
+                                    <input type="text" id="giatritim" class="form-control" placeholder="Search" style="width:150px">
+
+                                    <button type="submit" class="btn btn-default glyphicon glyphicon-search" value="Tim" id="tim" onclick="timkiem()"></button>
+                                </div>
+                            </form>
+                        </li>
+                        <li style="top:10px">
+
+                            <div>
+
+                                <button class="btn btn-danger btn-sm " type="button">
+
+                                    @Html.ActionLink("Đăng ký", "Register", "Homes")
+
+                                </button>
+
+
+                                <button class="btn btn-danger btn-sm" type="button">
+
+                                    @Html.ActionLink("Đăng Nhập", "Login", "Account")
+                                </button>
+                            </div>
+                        </li>
+                        <li>@Html.Action("Summary", "Home_HV")</li>
+                    </ul>
+
+
+
+                </div><!-- /.navbar-collapse -->
+            </div>        <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <br />
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <footer style="background-color:black; padding: 1rem;">
+        <div class="container-fluid ">
+            <div class="row text-center" style="color:white">
+                <div class="col-md-4">
+                    <img src="../IMG/logoG11A.png" style="width:60px">
+                    <hr class="light">
+                    <p>Phone:0123456789</p>
+                    <p>Email:mymail@gmail.com</p>
+                    <p>Address:Tp Hồ Chí Minh</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h4>Tuyển dụng</h4>
+                    <hr class="light">
+                    <p>Monday-Friday: 8am - 5pm</p>
+                    <p>Weekend: 8am - 12am</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <a href="../HTML/HomePage.html"><p>Trang Chủ</p></a>
+                    <a href="#"><p>Giới Thiệu</p></a>
+                    <a href="#"><p>Khóa Học</p></a>
+                    <a href="#"><p>Tài Liệu</p></a>
+                    <a href="#"><p>Tin Tức</p></a>
+                </div>
+                <hr>
+                <div class="col-12">
+
+                    <h6>
+                        &copy;  © CÔNG TY CỔ PHẦN QUỐC TẾ ANH VĂN G11 - Giấy chứng nhận doanh nghiệp số: 0313548147, Nơi cấp: SKHDT TP.HCM Trụ Sở Chính Tại 189 Nguyễn Thị Minh Khai, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh , Điện thoại: 028 3925 9899
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

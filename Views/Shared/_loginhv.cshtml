@@ -1,0 +1,224 @@
+﻿<header>
+    <style>
+        .btn-2 {
+            letter-spacing: 0;
+        }
+            .btn-2.color-blue:hover,
+            .btn-2.color-blue:active {
+                color: blue;
+            }
+            .btn-2:hover,
+            .btn-2:active {
+                letter-spacing: 5px;
+            }
+            .btn-2:after,
+            .btn-2:before {
+                backface-visibility: hidden;
+                border: 1px solid rgba(#fff, 0);
+                bottom: 0px;
+                content: " ";
+                display: block;
+                margin: 0 auto;
+                position: relative;
+                transition: all 280ms ease-in-out;
+                width: 0;
+                opacity: 0;
+            }
+            .btn-2.color-blue:after,
+            .btn-2.color-blue:before {
+                border: 1px solid blue;
+            }
+            .btn-2:hover:after,
+            .btn-2:hover:before {
+                backface-visibility: hidden;
+                transition: width 350ms ease-in-out;
+                width: 70%;
+                opacity: 1;
+            }
+
+
+    </style>
+</header>
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+    
+{
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar" }))
+    {
+        @Html.AntiForgeryToken()
+        /*CHUAN*/
+        <nav class="navbar navbar-default head_nav fix" style="background:black;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top:14px">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="" href="@Url.Action("Index","Home_HV")">
+                        <img src="../IMG/logoG11A.png"
+                             alt="Logo" style="height:50px; width:50px">
+                    </a>
+                    <form class="navbar-form visible-xs-inline-block" style="width:60%; margin-top:2px; margin-left:0px;">
+                        
+                    </form>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="@Url.Action("Index","Home_HV")" class="dropdown-toggle btn btn-2 color-blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#777">GIỚI THIỆU<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#vett">VỀ TRUNG TÂM</a></li>
+                                <li><a href="#vegv">ĐỘI NGŨ GIẢNG VIÊN</a></li>
+                                <li><a href="#vehv">HỌC VIÊN TẠI TRUNG TÂM</a></li>
+
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#777">KHOÁ HỌC<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+
+                                <li>@Html.ActionLink("Ielts", "Ielts_kh", "Home_HV")</li>
+                                <li>@Html.ActionLink("Toeic", "Toeic_kh", "Home_HV")</li>
+                                <li>@Html.ActionLink("Giao Tiếp", "GiaoTiep_kh", "Home_HV")</li>
+                            </ul>
+                        </li>
+
+                        <li>@Html.ActionLink("TÀI LIỆU", "Tailieu", "Home_HV")</li>
+
+
+                        <li>@Html.ActionLink("TIN TỨC", "Tintuc", "Home_HV")</li>
+                        <li>@Html.ActionLink("LIÊN HỆ", "Lienhe", "Home_HV")</li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="navbar-form navbar-left hidden-xs">
+                                <div class="form-group">
+                                    <input type="text" id="giatritim" class="form-control" placeholder="Search" style="width:150px">
+
+                                    <button type="submit" class="btn btn-default glyphicon glyphicon-search" value="Tim" id="tim" onclick="timkiem()"></button>
+                                </div>
+                            </form>
+                        </li>
+                        <li dropdown style="padding-top:7px">
+                            <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" style="width:150px">
+                                <i class="glyphicon glyphicon-user">z</i><span class="caret"></span>
+                            </button>
+
+                            <ul class="dropdown-menu">
+
+                                
+
+                                <li><a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a></li>
+
+                            </ul>
+                        </li>
+                       
+                        <li>@Html.Action("Summary", "Home_HV")</li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>        <!-- /.container-fluid -->
+        </nav>
+
+
+
+    }
+}
+else
+{
+    <nav class="navbar navbar-default head_nav fix" style="background:black;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top:14px">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="" href="@Url.Action("Index","Home")">
+                    <img src="../IMG/logoG11A.png"
+                         alt="Logo" style="height:50px; width:50px">
+                </a>
+                <form class="navbar-form visible-xs-inline-block" style="width:60%; margin-top:2px; margin-left:0px;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="@Url.Action("Index","Home")" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#777">GIỚI THIỆU<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#vett">VỀ TRUNG TÂM</a></li>
+                            <li><a href="#vegv">ĐỘI NGŨ GIẢNG VIÊN</a></li>
+                            <li><a href="#vehv">HỌC VIÊN TẠI TRUNG TÂM</a></li>
+
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:#777">KHOÁ HỌC<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+
+                            <li>@Html.ActionLink("Ielts", "Ielts_kh", "Home")</li>
+                            <li>@Html.ActionLink("Toeic", "Toeic_kh", "Home")</li>
+                            <li>@Html.ActionLink("Giao Tiếp", "GiaoTiep_kh", "Home")</li>
+                        </ul>
+                    </li>
+
+                    <li>@Html.ActionLink("TÀI LIỆU", "Ielts_tl", "Home")</li>
+
+
+                    <li>@Html.ActionLink("TIN TỨC", "Tintuc", "Home")</li>
+                    <li>@Html.ActionLink("LIÊN HỆ", "Lienhe", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <form class="navbar-form navbar-left hidden-xs">
+                            <div class="form-group">
+                                <input type="text" id="giatritim" class="form-control" placeholder="Search" style="width:150px">
+
+                                <button type="submit" class="btn btn-default glyphicon glyphicon-search" value="Tim" id="tim" onclick="timkiem()"></button>
+                            </div>
+                        </form>
+                    </li>
+                    <li style="top:10px">
+
+                        <div>
+
+                            <button class="btn btn-danger btn-sm " type="button">
+
+                                @Html.ActionLink("Đăng ký", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+
+                            </button>
+
+
+                            <button class="btn btn-danger btn-sm" type="button">
+
+                                @Html.ActionLink("Đăng Nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                            </button>
+                        </div>
+                    </li>
+                    <li>@Html.Action("Summary", "Home_HV")</li>
+                </ul>
+
+
+
+            </div><!-- /.navbar-collapse -->
+        </div>        <!-- /.container-fluid -->
+    </nav>
+
+}
+

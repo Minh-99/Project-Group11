@@ -1,0 +1,86 @@
+﻿@media all and (max-width:480px) {
+    .about-us {
+        flex-wrap: wrap;
+    }
+
+    .service .service-list {
+        flex-wrap: wrap;
+    }
+}
+/*code tạo hiệu ứng*/
+
+img {
+    width: 100%;
+    height: auto;
+    transition: all ease-in-out;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+}
+
+.txt {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.52);
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.img:hover div.txt {
+    opacity: 1;
+    transform: translateY(50px);
+    transition: ease-in-out 0.5s;
+}
+
+.img:hover img {
+    transform: scale(1.5);
+    transition: all ease-in-out 0.5s;
+}
+/*tao hieu uwng cho button*/
+.nut {
+    border-radius: 4px;
+    background-color: #d9534f;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 2px;
+    width: 100px;
+    height: 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: center;
+}
+
+    .nut span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .nut span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+    }
+
+    .nut:hover span {
+        padding-right: 25px;
+    }
+
+        .nut:hover span:after {
+            opacity: 1;
+            right: 0;
+        }

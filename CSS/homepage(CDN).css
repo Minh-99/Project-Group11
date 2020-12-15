@@ -1,0 +1,94 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap');
+
+body {
+    font-family: Arial;
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+}
+
+h2 {
+    font-family: 'Sans Serif';
+    color: orangered;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+@media (min-width: 1200px) {
+    .input-group {
+       
+    }
+}
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+        td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        td:nth-of-type(1):before {
+            content: "Khóa học:";
+        }
+
+        td:nth-of-type(2):before {
+            content: "Mã khóa hoc:";
+        }
+
+        td:nth-of-type(3):before {
+            content: "Dự kiến khai giảng:";
+        }
+
+        td:nth-of-type(4):before {
+            content: "Thời gian:";
+        }
+
+        td:nth-of-type(5):before {
+            content: "Lịch học:";
+        }
+
+        td:nth-of-type(6):before {
+            content: "Số buổi:";
+        }
+
+}

@@ -1,0 +1,64 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        
+        <ul class="nav navbar-nav navbar-right">
+            <li dropdown style="padding-top:7px">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" style="width:150px">
+
+                    <i class="glyphicon glyphicon-user">@Html.ActionLink(User.Identity.GetUserName(), "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</i><span class="caret"></span>
+
+                </button>
+
+                <ul class="dropdown-menu">
+
+                    <li><a href="@Url.Action("Thongtin","Home_HV")">Thông tin</a></li>
+
+                    <li><a href="@Url.Action("Tailieudamua","Home_HV")">Tài liệu đã mua</a></li>
+
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Đăng Xuất</a></li>
+
+                </ul>
+            </li>
+           
+        </ul>
+    }
+}
+else
+{
+    
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <form class="navbar-form navbar-left hidden-xs">
+                <div class="form-group">
+                    <input type="text" id="giatritim" class="form-control" placeholder="Search" style="width:150px">
+
+                    <button type="submit" class="btn btn-default glyphicon glyphicon-search" value="Tim" id="tim" onclick="timkiem()"></button>
+                </div>
+            </form>
+        </li>
+        <li style="top:10px">
+
+            <div>
+
+                <button class="btn btn-danger btn-sm " type="button">
+
+                    @Html.ActionLink("Đăng ký", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+
+                </button>
+
+
+                <button class="btn btn-danger btn-sm" type="button">
+
+                    @Html.ActionLink("Đăng Nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                </button>
+            </div>
+        </li>
+        <li>@Html.Action("Summary", "Home_HV")</li>
+    </ul>
+}
+
